@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.0/dist/sweetalert2.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  <link rel="stylesheet" href="spinner.css">
+  <title>Formulario JavaScript</title>
+</head>
+
+<body class="fondo-principal">
+  <header class="header">
+    <img class="carrito" src="./images/carrito.png" alt="boton del carrito">
+      <div>
+          <!-- Al ser un simulador se utiliz h1 para un breve titulo-saludo -->
+          <h1 class="header-h1">Bienvenido a nuestra plataforma interactiva</h1>
+      </div>
+    <div class="carrito-compra carrito-compra--off">
+      <p>CARRITO DE COMPRA</p>
+      <table>
+        <tr>
+          <th>Curso</th>
+          <th>Nombre</th>
+          <th>Precio</th>
+          <th>Cantidad</th>
+          <th></th>
+        </tr>
+        <tbody id="Lista-productos">
+        </tbody>
+      </table>
+    </div>
+    <nav>
+      <ul class="header__nav__ul">
+        <li><a href="#" id="client">Cliente</a></li>
+        <li><a href="#" id="new-client">Nuevo cliente</a></li>
+      </ul>
+    </nav>
+    <div class="div-icon">
+      <div>
+      </div>
+      <div class="div-icon-img">
+        <img src="./images/logoClima.png" alt="Icono del clima">
+      </div>
+    </div>
+  </header>
+  <main>
+    <p class="animacion">Elegi una de las opciones...</p>
+
+    <section id="client-pag" class="pag-cliente-off">
+      <p class="textos">Bienvenido, gracias por formar parte de nosotros </p>
+      <p class="textos">Por favor ingresa la opcion que prefieras: </p>
+      <section class="seccion-articles">
+        <article class="seccion-articles__art">
+          <h2>JavaScript</h2>
+          <img src="images/javaScript.jpg" alt="Curso de javaScript">
+          <p>Precio: <span>15000</span></p>
+          <button data-id="1" class="btn agregar-carrito">Agregar al carrito</button>
+        </article>
+        <article class="seccion-articles__art">
+          <h2>Python</h2>
+          <img src="images/python.png" alt="Curso de python">
+          <p>Precio: <span>17000</span></p>
+          <button data-id="2" class="btn agregar-carrito">Agregar al carrito</button>
+        </article>
+        <article class="seccion-articles__art">
+          <h2>React Js</h2>
+          <img src="images/cursoReact.png" alt="Curso de react js">
+          <p>Precio: <span>12000</span></p>
+          <button data-id="3" class="btn agregar-carrito">Agregar al carrito</button>
+        </article>
+      </section>
+      <div>
+        <button id="solicita-prestamo" class="btn">Solicitar prestamo</button>
+
+      </div>
+
+      <div id="cliente-opcion" class="cliente-opcion-off">
+
+
+        <p class="textos">A continuacion evaluaremos tu posibilidad de prestamo.</p>
+
+        
+        <input type="text" id="MontoCalcular" class="focus" style="font-size: 1.4rem; width: fit-content;"
+          placeholder="¿Cuanto ganas por mes?">
+
+        <button id="calcula-prestamo" class="btn">Calcular prestamo</button>
+
+
+
+      </div>
+      <button id="btn-continuar" class="btn">Continuar</button>
+
+    </section>
+
+
+    <div id="newClient-pag" class="pag-nuevo-cliente dir-form">
+      <h3 class="textos">Bienvenido a nuestra comunidad, ingresa la siguiente informacion: </h3>
+
+      <form id="formulario" class="form formulario" action="">
+        <div>
+          <label for="">Nombre</label>
+          <input id="nombre" class="focus" type="text" placeholder='"Tu nombre"'>
+        </div>
+        <div>
+          <label for="">Apellidos</label>
+          <input id="apellido" class="focus" type="text" placeholder='"Tu apellido"'>
+        </div>
+        <div>
+          <label for="">Telefono</label>
+          <input id="telefono" class="focus" type="tel" placeholder='"Tu numero de telefono"'>
+        </div>
+        <div>
+          <label for="">Email</label>
+          <input id="email" class="focus" type="email" placeholder='"Tu email"'>
+        </div>
+      </form>
+
+      <div class="textarea">
+        <label class="textos" for="">Te dejamos un espacio para que nos escribas lo que quieres tratar con
+          nosotros</label>
+        <textarea id="info-textarea" class="textarea" name="" id="" cols="30" rows="10"></textarea>
+      </div>
+      <button disabled id="enviar-form" class="btn-form opacidad">Enviar</button>
+      <div id="spinner" class="spinner ocultar">
+        <div class="dot1"></div>
+        <div class="dot2"></div>
+      </div>
+    </div>
+
+  </main>
+  <footer class="footer">
+    <ul class="footer__ul">
+      <li>Terms and Conditions</li>
+      <li>Privacy Policy</li>
+      <li>Todos los derechos reservados.</li>
+    </ul>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.0/dist/sweetalert2.all.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  <script src="main.js"></script>
+
+</body>
+
+</html>
+
